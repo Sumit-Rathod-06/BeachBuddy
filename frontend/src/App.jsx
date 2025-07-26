@@ -1,8 +1,20 @@
 import React from 'react'
+import {Route, createBrowserRouter, createRoutesFromElements, RouterProvider} from "react-router-dom";
+import Home from './pages/Home';
+import BaseLayout from "./layouts/BaseLayout"
 
 const App = () => {
+
+  const router = createBrowserRouter(
+    createRoutesFromElements(
+      <Route path="/" element={<BaseLayout />}>
+        <Route index element={<Home />} />
+      </Route>
+    )
+  );
+
   return (
-    <div className='text-blue-600'>Hello BeachBuddy!</div>
+    < RouterProvider router={router} />
   )
 }
 
