@@ -1,8 +1,16 @@
-import React from "react";
+import React,{useState} from "react";
 import { Link } from "react-router-dom";
-import { MapPin, House, Waves, Info,AlignJustify  } from "lucide-react";
+import { MapPin, House, Waves, Info,AlignJustify,X } from "lucide-react";
+import Hamburgerhelp from "./Hamburgerhelp";
 
 const Navbar = () => {
+
+    const [isOpen,setIsOpen] = useState(false);
+
+    const toggleNavbar = () => {
+        setIsOpen(!isOpen);
+    }
+
   return (
     <>
       <div className="hidden md:flex fixed top-0 left-0 w-full z-50 justify-between items-center px-3 py-7 h-12 mb-2 font-(family-name:--font-poppins) bg-white">
@@ -49,8 +57,9 @@ const Navbar = () => {
           </h1>
         </div>
         <div className="mr-5">
-            <AlignJustify />
+            <button onClick={toggleNavbar}>{isOpen ? <X/> : <AlignJustify/>}</button>
         </div>
+        {isOpen && <Hamburgerhelp isOpen={isOpen}/>}
       </div>
     </>
   );
