@@ -31,7 +31,7 @@ const Navbar = () => {
             <div className="flex items-center gap-0.5 text-slate-600 hover:text-blue-600">
               <MapPin className="h-5 " />
               <li className="text-lg ">
-                <Link to="/men">Beaches</Link>
+                <Link to="/search">Beaches</Link>
               </li>
             </div>
             <div className="flex items-center gap-0.5 text-slate-600 hover:text-blue-600">

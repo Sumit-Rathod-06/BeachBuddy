@@ -8,3 +8,7 @@
   --font-lato: "Lato";
   --font-roboto: "Roboto"; 
 }
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}

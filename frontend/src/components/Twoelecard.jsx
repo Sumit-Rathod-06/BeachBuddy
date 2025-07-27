@@ -1,0 +1,63 @@
+import React from 'react'
+import Beachimg from '../assets/Beachimg.jpg'
+import {MapPin,Shield,User,Sunrise,Sunset, MoveRight} from 'lucide-react'
+
+const Twoelecard = () => {
+  return (
+    <div className='flex items-start justify-start gap-3 bg-slate-300 w-full p-4 rounded-4xl hover:bg-slate-400 hover:scale-103 transform transition-transform duration-300'>
+        <div className='w-50 h-40 overflow-hidden rounded-3xl'>
+            <img src={Beachimg} alt="beach-img" className='w-full h-full'/>
+        </div>
+        <div className='flex flex-col justify-start items-start gap-3'>
+          <div className='flex gap-100 items-center'>
+            <div className='flex flex-col'>
+              <h4 className='text-lg font-semibold'>Gorai Beach</h4>
+              <div className='flex gap-1'>
+                <MapPin/>
+                <p>53km away</p>
+              </div>
+            </div>
+            <div className='flex justify-start items-start gap-2 text-blue-400 hover:text-blue-600 cursor-pointer'>
+              <button className='cursor-pointer'>View</button>
+              <MoveRight/>
+            </div>
+          </div>
+          <div className='flex justify-evenly items-center w-full'>
+              <div className='flex flex-col justify-center items-center'>
+                <div className='flex gap-1 bg-gray-500 hover:bg-gray-600 text-white p-2 rounded-2xl'>
+                  <Shield/>
+                  <p>9.1</p>
+                </div>
+                <p>Safety Score</p>
+              </div>
+              <div className='flex flex-col justify-center items-center'>
+                <div className='flex gap-1 bg-gray-500 hover:bg-gray-600 text-white p-2 rounded-2xl'>
+                  <User/>
+                  <p>Low</p>
+                </div>
+                <p>Crowd level</p>
+              </div>
+              <div className='flex flex-col justify-center items-center'>
+                <div className='flex gap-1 bg-gray-500 hover:bg-gray-600 text-white p-2 rounded-2xl'>
+                  <Sunrise/>
+                  <p>7:15 AM</p>
+                </div>
+                <p>Sunrise</p>
+              </div>
+              <div className='flex flex-col justify-center items-center'>
+                <div className='flex gap-1 bg-gray-500 hover:bg-gray-600 text-white p-2 rounded-2xl'>
+                  <Sunset/>
+                  <p>7:12 PM</p>
+                </div>
+                <p>Sunset</p>
+              </div>
+          </div>
+          <div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          </div>
+        </div>
+    </div>
+  )
+}
+
+export default Twoelecard
