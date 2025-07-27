@@ -7,7 +7,7 @@ import Trending from '../components/Trending'
 
 const Home = () => {
   return (
-    <div className='bg-slate-200 font-(family-name:--font-poppins) mt-14'>
+    <div className='bg-slate-200 font-(family-name:--font-poppins) md:mt-14'>
       <Hero/>
       <Features/>
       <Trending/>

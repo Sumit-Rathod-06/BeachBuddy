@@ -5,7 +5,7 @@ import Beachimg from "../assets/Beachimg.jpg"
 const Beachcard = () => {
   return (
     <div className='flex flex-col justify-evenly bg-gray-300 overflow-hidden rounded-2xl text-slate-900 hover:bg-slate-300 hover:shadow-2xl transform transition-transform duration-300 hover:scale-105 hover:text-black'>
-        <div className='w-100'> 
+        <div className='md:w-100 w-88'> 
             <img src={Beachimg} alt="beach-img" className='h-50 w-full'/>
         </div>
         <div className='m-3'>
