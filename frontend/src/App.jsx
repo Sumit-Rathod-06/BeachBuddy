@@ -3,6 +3,7 @@ import {Route, createBrowserRouter, createRoutesFromElements, RouterProvider} fr
 import Home from './pages/Home';
 import Searchresult from './pages/Searchresult';
 import BaseLayout from "./layouts/BaseLayout"
+import Beachdetail from './pages/Beachdetail';
 
 const App = () => {
 
@@ -11,6 +12,7 @@ const App = () => {
       <Route path="/" element={<BaseLayout />}>
         <Route index element={<Home />} />
         <Route path='search' element={<Searchresult/>} />
+        <Route path='beach' element={<Beachdetail/>} />
       </Route>
     )
   );

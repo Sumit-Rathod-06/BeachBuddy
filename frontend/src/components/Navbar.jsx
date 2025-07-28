@@ -37,7 +37,7 @@ const Navbar = () => {
             <div className="flex items-center gap-0.5 text-slate-600 hover:text-blue-600">
               <Info className="h-5 " />
               <li className="text-lg ">
-                <Link to="/women">About</Link>
+                <Link to="/beach">About</Link>
               </li>
             </div>
           </ul>
