@@ -3,7 +3,7 @@ import Twoelecard from './Twoelecard'
 
 const Twoele = () => {
   return (
-    <div className='h-134 w-full flex flex-col justify-start items-start gap-3 px-3 pt-1 overflow-y-auto scrollbar-hide'>
+    <div className='h-111 md:h-134 w-full flex flex-col justify-start items-start gap-3 md:px-3 pt-1 overflow-y-auto scrollbar-hide'>
         <Twoelecard/>
         <Twoelecard/>
         <Twoelecard/>
