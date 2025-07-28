@@ -4,7 +4,7 @@ import { TrendingUp, Clock, Star } from "lucide-react";
 
 const Overview = () => {
   return (
-    <div className="grid grid-cols-2 px-20 pb-5 gap-6">
+    <div className="grid grid-cols-2 px-35 pb-5 gap-6">
       <div className="bg-white rounded-3xl p-5 flex flex-col gap-2">
         <div className="flex items-center gap-2">
           <TrendingUp className="text-blue-700" />

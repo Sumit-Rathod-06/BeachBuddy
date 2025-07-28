@@ -16,13 +16,13 @@ const Beachnav = () => {
     if (current) {
       setIndicatorStyle({
         width: current.offsetWidth + 'px',
-        left: current.offsetLeft + 'px',
+        left: (current.offsetLeft+10) + 'px',
       });
     }
   }, [isSelected]);
 
   return (
-    <div className="py-5 px-40">
+    <div className="py-5 px-35">
       <div className="relative bg-gray-300 p-2 rounded-xl overflow-hidden">
         {/* Sliding background */}
         <div

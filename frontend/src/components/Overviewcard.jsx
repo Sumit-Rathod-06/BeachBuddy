@@ -7,7 +7,7 @@ const Overviewcard = () => {
         <div className='flex items-center gap-3'>
             <Waves className='text-blue-600'/>
             <div>
-                <p className='text-md m-0 p-0'>Waves</p>
+                <p className='text-md m-0 p-0 font-medium'>Waves</p>
                 <p className='text-sm text-gray-500'>Moderate Chop</p>
             </div>
         </div>

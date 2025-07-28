@@ -12,7 +12,7 @@ const Beachdetail = () => {
     <div className='bg-slate-200 font-(family-name:--font-poppins) md:mt-14'>
         <Beachtitle/>
         <Beachnav/>
-        <Weather/>
+        <Reviews/>
         {/*<Overview/>
         <Weather/>
         <Tides />
