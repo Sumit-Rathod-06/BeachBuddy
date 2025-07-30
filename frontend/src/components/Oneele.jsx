@@ -1,11 +1,12 @@
 import React, { useEffect } from "react";
 import { useContext } from "react";
-import { dataContext } from "../pages/Searchresult";
+import { dataContext } from "../App";
 
 const Oneele = () => {
-  const data = useContext(dataContext);
+  const {data} = useContext(dataContext);
 
   useEffect(() => {
+    console.log("OneEle data: ",data);
     window.initMap = initMap;
 
     const existingScript = document.getElementById("googleMaps");
@@ -24,17 +25,19 @@ const Oneele = () => {
 
     function initMap() {
       const map = new window.google.maps.Map(document.getElementById("map"), {
-        center: { lat: data[0].latitude, lng: data[0].longitude }, // Center of India
+        center: { lat: data[0].latitude, lng: data[0].longitude }, 
         zoom: 12,
       });
 
       const locations = [];
 
       for (const item of data) {
-        locations.push({
-          title: item.name,
-          position: { lat: item.latitude, lng: item.longitude },
-        });
+        if (item.latitude && item.longitude) {
+          locations.push({
+            title: item.name,
+            position: { lat: item.latitude, lng: item.longitude },
+          });
+        }
       }
 
       locations.forEach(({ title, position }) => {

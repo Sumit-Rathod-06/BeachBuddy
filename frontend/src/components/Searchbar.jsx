@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios"
 
-const Searchbar = ({ setData }) => {
-  const [input, setInput] = useState("");
+const Searchbar = ({ setData,ipt }) => {
+  const [input, setInput] = useState(ipt || "");
 
   const handleclick = async () => {
     try {

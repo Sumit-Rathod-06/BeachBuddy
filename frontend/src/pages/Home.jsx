@@ -5,10 +5,10 @@ import Footer from '../components/Footer'
 import Ctoa from '../components/Ctoa'
 import Trending from '../components/Trending'
 
-const Home = () => {
+const Home = ({setInput}) => {
   return (
     <div className='bg-slate-200 font-(family-name:--font-poppins) md:mt-14'>
-      <Hero/>
+      <Hero setInput={setInput}/>
       <Features/>
       <Trending/>
       <Ctoa/>

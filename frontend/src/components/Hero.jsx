@@ -1,10 +1,24 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { dataContext } from "../App";
+import axios from "axios";
 
-const Hero = () => {
-  const [input, setInput] = useState("");
+const Hero = ({ setInput }) => {
+  const [ipt, setIpt] = useState("");
+  const {setData} = useContext(dataContext);
 
   const handleclick = async () => {
-    console.log(input)
+    setInput(ipt);
+    try {
+      const res = await axios.get("http://localhost:3000/search", {
+        params: { query: ipt },
+      });
+      console.log("Response from backend:", res.data);
+      setData(res.data);
+    } catch (err) {
+      console.error("Axios error:", err);
+    }
   };
 
   return (
@@ -23,17 +37,19 @@ const Hero = () => {
       <div className="text-center flex justify-center items-center gap-2 md:relative">
         <input
           type="text"
-          value={input}
+          value={ipt}
           placeholder="Search for a beach..."
-          onChange={(e) => setInput(e.target.value)}
+          onChange={(e) => setIpt(e.target.value)}
           className="w-50 h-10 md:w-150 md:h-12 bg-white text-slate-500 rounded-xl p-3"
         />
-        <button
-          className="bg-orange-600 hover:bg-orange-800 cursor-pointer md:absolute md:left-125 md:right-0 md:top-1 w-24 h-10 rounded-xl"
-          onClick={handleclick}
-        >
-          Search
-        </button>
+        <Link to='/search'>
+          <button
+            className="bg-orange-600 hover:bg-orange-800 cursor-pointer md:absolute md:left-125 md:right-0 md:top-1 w-24 h-10 rounded-xl"
+            onClick={handleclick}
+          >
+            Search
+          </button>
+        </Link>
       </div>
       <div className="hidden md:block absolute left-20 top-10 h-20 w-20 bg-blue-600 rounded-full"></div>
       <div className="hidden md:block absolute left-45 top-70 h-10 w-10 bg-blue-500 rounded-full"></div>
